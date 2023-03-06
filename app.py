@@ -3,7 +3,7 @@ from datetime import datetime, timezone
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.options import Options
+from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import *
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.chrome.service import Service as ChromeService
@@ -40,7 +40,7 @@ connection.commit()
 def init_driver():
     chrome_options = Options()
 
-    arguments = ['--lang-US', '--window-size=1920,180', '--incognito']
+    arguments = ['--lang-US', '--window-size=1920,1800', '--incognito']
 
     for argument in arguments:
         chrome_options.add_argument(argument)
@@ -57,10 +57,17 @@ def init_driver():
     return driver, wait
 
 def web_scraping_amazon():
-    pass
+    
+    driver, wait = init_driver()
+    driver.get('https://www.amazon.com.br/')
+
+
 
 def web_scraping_magalu():
     pass
 
 def web_scraping_fastshop():
     pass
+
+
+web_scraping_amazon()
