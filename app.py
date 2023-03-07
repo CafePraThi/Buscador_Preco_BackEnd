@@ -35,9 +35,9 @@ def new_product(sql, connection, name, price, site, quote_date, link_img):
         print("Dados ja cadastrados anteriormente")
 
 #new_product(sql, connection, 'Corsarebaixado', 10000, 'Amazon.com/corsa', datetime.now(), 'https://source.unsplash.com/random/150x150' )
-connection.commit()
+    connection.commit()
 
-def init_driver():
+def init_driver(): 
     chrome_options = Options()
 
     arguments = ['--lang-US', '--window-size=1920,1800', '--incognito']
