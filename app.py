@@ -59,7 +59,7 @@ def init_driver():
 def web_scraping_amazon():
     
     driver, wait = init_driver()
-    driver.get('https://www.amazon.com.br/')
+    driver.get('https://shopping.google.com.br/')
 
 
 
